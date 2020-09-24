@@ -2,22 +2,36 @@
 <html>
 <head>
 	<title>AutoRacer</title>
-	<style>
-	html, body {
-    height: 100%;
-    margin: 0;
-  	}
-	body {
-		background: white;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-
-	}
-</style>
+	
 </head>
 <body>
-ok
+
+<script src="game.js"></script>
+
+<p>Points Available: <span id="pointAvail">15</span></p> 
+
+<div>
+	Engine: <button onclick="subPoints(engineSpan)">-</button> 
+	<span id="engineSpan">0</span>
+	<button onclick="addPoints(engineSpan)">+</button>
+</div>
+
+ 
+<div>
+	Transmission:<button onclick="subPoints(transSpan)">-</button> 
+	<span id="transSpan">0</span>
+	<button onclick="addPoints(transSpan)">+</button>
+</div>
+
+
+<div>
+	Turbo: <button onclick="subPoints(turboSpan)">-</button> 
+	<span id="turboSpan">0</span>
+	<button onclick="addPoints(turboSpan)">+</button>
+</div>
+
+<button onclick="checkPoints()">Create Car</button>
+<button onclick="startGame()">Start Race</button>
 
 </body>
 </html>
